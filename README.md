@@ -31,7 +31,7 @@ This project was a Python script designed to automate copy-trading on the Bybit 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Erwann-RAMBEAUX/bot_crypto.git](https://github.com/Erwann-RAMBEAUX/bot_crypto.git)
+    git clone https://github.com/Erwann-RAMBEAUX/bot_crypto.git
     ```
 
 2.  **Install the required dependencies:**
