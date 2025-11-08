@@ -1,63 +1,61 @@
-# Copie-Trading Crypto sur Bybit des trade de CryptoPicsou
+# Bybit Crypto Copy-Trading Bot
 
-Ce projet consistait en un script Python permettant de réaliser du copie-trading sur la plateforme Bybit en se basant sur les signaux de trading postés par "CryptoPicsou" sur Discord. Le script est accompagné d'un bot Discord qui annonce automatiquement chaque nouveau trade lancé sur un canal spécifié.
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Library](https://img.shields.io/badge/Library-pybit-orange.svg)
+![Library](https://img.shields.io/badge/Library-discord.py-7289DA.svg)
+![Status](https://img.shields.io/badge/Status-Inactive%20%2F%20Archived-red.svg)
 
-⚠️ **Ce bot n'est plus fonctionnel. Ce README est fourni à titre informatif uniquement.**
+This project was a Python script designed to automate copy-trading on the Bybit exchange. It was built to parse trading signals posted by the user "CryptoPicsou" on Discord and automatically execute corresponding trades. The script also included a companion Discord bot to announce all new trades it opened.
 
-## Fonctionnalités
+---
 
-- Surveillance en temps réel des messages postés par "CryptoPicsou" sur Discord.
-- Analyse des signaux de trading pour détecter les opportunités d'achat ou de vente.
-- Exécution automatique des trades sur la plateforme Bybit en fonction des signaux reçus.
-- Notification instantanée des nouveaux trades via un bot Discord.
+> ⚠️ **Project Archived: This Bot is No Longer Functional**
+>
+> This repository is maintained for informational and archival purposes only. The APIs, endpoints, and message-parsing logic are outdated and **will not work**. Do not attempt to use this script for live trading.
 
-## Configuration requise
+## Archived Features
 
-- Python 3.x
-- Bibliothèques Python : `requests`, `pybit`, `discord.py`
+* **Real-time Signal Monitoring:** Listened to a specific Discord channel for new messages from the target user ("CryptoPicsou").
+* **Signal Parsing:** Analyzed message content to detect and extract trade opportunities (e.g., currency pair, entry price, stop-loss, take-profit).
+* **Automated Trade Execution:** Used the `pybit` library to automatically place orders on Bybit based on the parsed signals.
+* **Trade Notifications:** A separate Discord bot instantly announced any new trade opened by the script to a specified private channel.
 
-## Installation
+## Technology Stack
 
-1. **Clonez ce dépôt sur votre machine :**
+* **Python 3.x**
+* **[pybit](https://github.com/bybit-exchange/pybit):** The official Python SDK for the Bybit API.
+* **[discord.py](https://github.com/Rapptz/discord.py):** A Python wrapper for the Discord API, used for both monitoring and notifying.
+* **[requests](https://pypi.org/project/requests/):** For general HTTP requests.
 
-   ```
-   git clone https://github.com/Erwann-RAMBEAUX/bot_crypto.git
-   ```
+## Original Setup Instructions (For Archival Only)
 
-2. **Installez les dépendances Python nécessaires :**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Erwann-RAMBEAUX/bot_crypto.git](https://github.com/Erwann-RAMBEAUX/bot_crypto.git)
+    ```
 
-   ```
-   pip install requests
-   pip install pybit
-   pip install discord.py
-   ```
+2.  **Install the required dependencies:**
+    ```bash
+    pip install requests pybit discord.py
+    ```
 
-3. **Configurez vos clés d'API Bybit dans le fichier `constant.py`.**
+3.  **Configure API Keys:** Add your Bybit API keys (key and secret) to the `constant.py` file.
 
-4. **Créez un bot Discord et configurez-le pour votre serveur Discord.**
+4.  **Configure Discord Bot:**
+    * Create a Discord Bot application in the Discord Developer Portal.
+    * Add the bot's token to `trade.py` (for the listener) and `bot.py` (for the notifier).
 
-5. **Ajoutez le token du bot Discord dans `trade.py` et `bot.py`.**
+## Original Usage (For Archival Only)
 
-## Utilisation
+1.  **Run the main trading script:**
+    ```bash
+    python trade.py
+    ```
+2.  The script would then monitor the target channel. The notifier bot (if used) would need to be run separately:
+    ```bash
+    python bot.py
+    ```
 
-1. **Lancez le script principal `trade.py` :**
+## Disclaimer
 
-   ```
-   python trade.py
-   ```
-
-2. **Assurez-vous que le bot Discord est en ligne et a accès au canal spécifié.**
-
-3. **Détendez-vous et laissez le script gérer vos trades en fonction des signaux de "CryptoPicsou" !**
-
-## Contributions
-
-Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet ou ajouter de nouvelles fonctionnalités, n'hésitez pas à ouvrir une pull request.
-
-## Avertissement
-
-Ce projet est fourni à titre éducatif uniquement. Le trading de cryptomonnaies comporte des risques et vous pouvez perdre tout votre investissement. Assurez-vous de comprendre les risques associés au trading avant d'utiliser ce logiciel.
-
-## Auteurs
-
-- [Erwann RAMBEAUX](https://github.com/Erwann-RAMBEAUX)
+This project was provided for educational purposes only. All trading, especially with cryptocurrencies, involves substantial risk. You can lose your entire investment. The author is not responsible for any financial losses incurred from the use or misuse of this code. This software was provided "as-is" with no warranty.
